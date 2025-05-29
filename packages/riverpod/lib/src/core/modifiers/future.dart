@@ -308,7 +308,7 @@ mixin FutureModifierElement<StateT> on ProviderElement<AsyncValue<StateT>> {
 
       final asyncSub = (
         cancel: subscription.cancel,
-        pause: subscription.pause,
+        pause: () {}, //subscription.pause,
         resume: subscription.resume,
         abort: subscription.cancel,
       );
